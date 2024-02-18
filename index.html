@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chillax Zoom</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Chillaxzoom logo">
+      </a>
+
+      <div class="header-actions">
+
+    <div class="search-box">
+      <select id="movieType">
+        <option value="movies" ><b>Movies</b></option>
+        <option value="kidsmovies" ><b>Kids Movies</b></option>
+      </select>
+          </div>
+
+
+<div class="footer-search">
+<form action="">
+<input type="text" id="searchInput" placeholder="Search movies..." class="cancel-btn">
+<button class="cancel-btn">&times;</button>
+</form>
+</div>
+
+  
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+          </select>
+        </div>
+
+        <!--<button class="btn btn-primary">Sign in</button>-->
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Chillaxzoom logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="actionButton">Action</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="crimeButton">Crime</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="thrillerButton">Thriller</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="horrorButton">Horror</a>
+          </li>
+
+           <li>
+            <a href="#" class="navbar-link" id="comedyButton">Comedy</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="dramaButton">Drama</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" id="dubbedButton">Dubbed</a>
+          </li>
+
+        </ul>
+
+        
+
+      </nav>
+
+    </div>
+
+
+
+
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #Slider
+      -->
+
+<section id="slider" class="radio-container">
+    <input type="radio" name="slider" id="s1" data-slide="1" checked>
+    <input type="radio" name="slider" id="s2" data-slide="2">
+    <input type="radio" name="slider" id="s3" data-slide="3">
+    <input type="radio" name="slider" id="s4" data-slide="4">
+    <input type="radio" name="slider" id="s5" data-slide="5">
+    <input type="radio" name="slider" id="s6" data-slide="6">
+    <input type="radio" name="slider" id="s7" data-slide="7">
+    <input type="radio" name="slider" id="s8" data-slide="8">
+    <input type="radio" name="slider" id="s9" data-slide="9">
+    <input type="radio" name="slider" id="s10" data-slide="10">
+    <input type="radio" name="slider" id="s11" data-slide="11">
+    <input type="radio" name="slider" id="s12" data-slide="22">
+
+    <label for="s1" id="slide1">
+      <div class="zoom-container" data-slide="1">
+        <a href="./captainmiller.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1bh0mGvuIgsTsouTzCQOywdrKknq_V9SXvinbS5yu97u8sBfdjRMbr3EifW5C8QZ2jG0E1gfwbS12yWpm6mEoOtVQ9UU67M-ZBBjP_YWI7xLTZRm9iR_PPDOdUxxAAnrKdNRLmCEKcmjZoVcsmMBDRBTqDVCjm-YerrVpgieJCicQ-EJYNEzk0VhsdV5f/s1600/cm2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s2" id="slide2">
+      <div class="zoom-container" data-slide="2">
+       <a href="./omov.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsC5p9iPQwli-6FHSyEkRkO5VviLlqlYpkmr3_tCjqBL2VeAJ4w4Rv5Xw-zPH04ta7KHT0A1ULlN8eUt1WuWgNQcJVaHfnLuw-12lkD-Xk6xW-EkzOMZcsTcVeNSI1Ue_zoUR5OyH4KCiNg1CIc-qPFtIIo7cQubLJhwaJegi54EzJCaBIqHLiW7wKHCoI/s1600/ovom2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s3" id="slide3">
+      <div class="zoom-container" data-slide="3">
+       <a href="./vvs.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzjVk92qu7azhc4f6X5FJ04n6rKMa0tCe2MDSd2LvZLpFbdPO10Vm7qgqP06eTPKV5PSjZM5L7ATUUyu6kj65rXl-EuoFuFzDHCaxhn1gXALtkS6-k4pCFwnF3tG2OMvTwb7fdhtTDJP6A7A5m1_lP_MpCZHzh6zCl2yQLeWqB9MgfCh00Uh-Oxk8poSvW/s1600/vs2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s4" id="slide4">
+      <div class="zoom-container" data-slide="4">
+        <a href="./valimai.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDum-NOUEUI2il4xRN7XY9HPZa3qYzJM1DksDjNYaDDCA9vftot1DSDPOVul1dbuM-zWVSyj_c9KQFhaxCLIBJ6Ik1UAIf-QEFq7xICafopaxJqTixjQQFhyha6gxhLtnPfd7XrYxR3vnWhqwXq6m9ubdLBm_aRrNZK5mwAI6hIHOumQpV2qb4mla_tMNz/s1600/valimai2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s5" id="slide5">
+      <div class="zoom-container" data-slide="5">
+       <a href="./teddy.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDkVUY51XUcIvV7wDbZZHyPCpPAwVTVM7RvPkn312ToKVictrP8yqX5suYQHEsFFG41RV0yiIu0rPTpaz8g6VeN5ND8hM9SqFBnDeFOVD-KL4sxLpg4ASAkKfINfE0O7NdRibfS5ZRtFlOtvsaaDQZmcHHhX1GP8u6fhYq1_SKwYQpZwRlh_GTtDQYLdOZ/s1600/teddy2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s6" id="slide6">
+      <div class="zoom-container" data-slide="1">
+       <a href="./fightclub.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1XIbvBcVDJ7Sp6dAeST4OMzTP-TH2kXCzd4pK0_wA5qpfJT9EKHXs-ynv_iemZ1Wn0ilb-q3jZ-0JUyJsXXRigcP5OOJNM3szRvAlhaNeoofOVB4EMmdqgyp9HM5OGiPGNGQMk6jV6ffMRtadWwoS7mNAG5MSIm3VugHDqQ-aVVhAw_KEE7ykLJhluWn8/s1600/fightclub2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s7" id="slide7">
+      <div class="zoom-container" data-slide="2">
+        <a href="./animal.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxUoBJ6zV-xcbHqGCx-oFdGCS1TSMdeO_0MbePzz0bHqKs2jLXNdSASbpuiE5T3KHNCPjO5EllQq_VSRD7Vi94bUofUtA3499oMi11DYuYLE0FOwmZzblEIik6QcL9nqgpluJcq7Uv_BSW4VbKpWHZPnju9YmqQB-NzK6W3OMqfag3eJxljCIyY0HbACpz/s1600/animal2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s8" id="slide8">
+      <div class="zoom-container" data-slide="3">
+      <a href="./4554.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw8NggiH0tJaoxtyqSxDmmrBjPaBojC4PjWu7PrQxzrAF7jvo6FQuRu8TKPIapbFuGQn3vKDTSdWxXS_QoCvtu0cTwewyPdzn7p4DxeqVVyxTy6arCi8hasXYjpCqRaHeS4QiaLtebYA8oFPquqPro5eabUxMtJEzux4SHduIKz6K6OjUKAbtjHkEpOUCS/s1600/4554.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s9" id="slide9">
+      <div class="zoom-container" data-slide="4">
+        <a href="./sabanayagan.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpANcIpnaf2yZqit5R9cBTBvTpmt4m6RORMhO1c_YmTEiZ1Y41gQPFGIWof9zIXPTt4mJlnj56YJlol_K1bvqfQFzpn_cF1y7_J59oPlvpM05GVkIeae2Nz2hbP6C5AYnDgbOzqrgXh2aALZT2D2iVnBymq0CuMq_zOVNhmtpE3v1sGoGaVgBn5SPHdGwT/s1600/sabanayagan2.jpg" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s10" id="slide10">
+      <div class="zoom-container" data-slide="5">
+        <a href="./ayalaan.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5ZY7y-e8R0uK3p3jvFsAVP9ssucmm8QdYWShocjvLDDZ3zpYpEnhNBul_LfQm9CO1jyMzGSA_zMTFsaOITZ3AaFxC2N3An-oOiRt9BEZuOCQ83qWi9EjNphBHhXk6uk6nQzOgLAbJMfMLv8A75rkDZgV-KLAQpFzyycF8U0G0ozuxEVdNkFpMeKvHlPS0/s16000/Ayalaan2.jpeg" alt=""></a>
+      </div>
+    </label>
+
+        <label for="s11" id="slide11">
+      <div class="zoom-container" data-slide="1">
+        <a href="./sivakumarinsabatham.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoavzfEVrrkOgQWwfGAv8Ke0m0ElCoiEt7eWUypRJvDwCKklgcSnmdBgH6UFvigDV7jZXHegcQ6fNsv44Ol7G5TMLd7CHBtIE3NPmfF4fIIdw7F4ZtHGXPS89ZFhYQF2SFaGAFV8rxl0Pae1QuZUWb6tWMdkKlQiG3S3hNTIwvFhCr0pxeVg-CZ2SEh7dP/s1600/sivakumarinsabatham2.webp" alt=""></a>
+      </div>
+    </label>
+
+    <label for="s12" id="slide12">
+      <div class="zoom-container" data-slide="2">
+        <a href="./sinam.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9sdTmpyOh78SeAToGl3WhDod9mP4OI2H-RjqkCSEBxnABpGwYXVTV2f3EZmVKCUtGlPqkKqYzmnufpLlH714Cr2YNix8Zy1vI46zBeIJxaefFpdqPpEuk3cXtXeUDCn0oaTwyYjG-DNKTwe_q36eQiwI70Bi43Ogmcl54z5TAIQ52BdMGJGkkpTp-WtpK/s1600/sinam2.png" alt=""></a>
+      </div>
+    </label>
+
+
+  </section>
+
+      <!-- 
+        - #TOP RATED
+      -->
+
+      <section class="top-rated">
+        <div class="container">
+
+         
+          <h2 class="h2 section-title">Movies</h2>
+
+          
+          <ul class="movies-list" id="moviesList">
+
+            <li>
+              <div class="movie-card" data-tags="action, drama">
+
+                <a href="./captainmiller.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnc-MCav7w65rnQIX4JXxCI3wnoh-nHlPYqoVGRkQ9f16A8NnguywEDPUPrETR5TQRYYV9UGvxWaX3fwjKWknvoCcNzEWo9PFokdkvyzjhNBMvbvKazy0DI_RQ11hR2wUrPFDrwh8X_AWl5iG7ImQOUfc1vzyM7C2oVb5bdlp_zVLBkrzX99KyqKNITBpe/s1600/Captain-Miller.jpg" width="300" height="900" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./captainmiller.html">
+                    <h3 class="card-title">Captain Miller</h3>
+                  </a>                  
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="comedy, horror">
+
+                <a href="./omom.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqTPXEUOxQ05YfLqo1EHxDWNz159Eo7IhVgCfJyOFx9IuGyBI2De2_fUvOVtk_OiLwEjMXJgrxG4KsSA_28VY0BINcWcO8PuvhwvOqWuAA4mzgeNTW4D9Ny9juWUEpKxKCvH7-uVNZ22yHJfPcoNKpJ7PuVCTwXH-EuU6oUr4afOm8KxPPVgW3EcSgkNWV/s1600/ovom.jpg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./omom.html">
+                    <h3 class="card-title">Odavum Mudiyadhu Oliyavum Mudiyadhu</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, crime, thriller">
+
+                <a href="./vvs.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzUb8rJWVpukBv0IcNGxctWrbQZwowZkQg7SGM82EoLZVrjjHwLzUlolLdiyMOFxdrS-nCBXu45Pr5vyJDg7FKK5O1fYm_GMZVa64d2lGAzy5ZWC0I_5VXb-5dwrXO9m7-Yp6OKIuo6ICV0DKcB0s5HkS9ZgTcvUYEPzJEFiJmkVxFKpZgrTSwrXByLjSg/s1600/vs.jpg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./vvs.html">
+                    <h3 class="card-title">Veerame Vaagai Soodum</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, crime, thriller">
+
+                <a href="./valimai.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6kGZeDbImc2qTJQxzxUKuHUaYDarBl4sK0exZDoWLIdZNbr7HYcmqSYI8WEFVsPGAoDfczEYh54mTUZdeozigopIRwwz59Om8x4MwlXjv4K5yUxSDpL6_cfXRpzso8tv7VZeinI2hCIzeArOOhyphenhyphenD5ILWMU3XK-_K12B1w2XxzDiYS8NJvtAqwQ8cjYn_x/s1600/valimai.jpeg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./valimai.html">
+                    <h3 class="card-title">Valimai</h3>
+                  </a>
+                  </div>
+                </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, drama">
+
+                <a href="./teddy.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbsbQxdaVhagQdCU6j4FpDLL-a6ikbeVyNVi1ZuFasVf9XSwFh6tXGXfPNvlQdztjm66FirFp7t3YUo1y7i1hIF6hVc0fAF0JK5lFuLMRnUr3HKTTHGSC1WEBVHDHMD6Z4X_QjPD8W-8XKJyPB3HGaGwLkFIui_IkAYKa6aKYN_EAX1trWBHPdBM0Tgt5j/s1600/teddy.jpg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./teddy.html">
+                    <h3 class="card-title">Teddy</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, thriller">
+
+                <a href="./fightclub.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUwm7UkTUCY_BPzYluLDW-1X_x_CtZXoRnn5CqLsFyO7lkigm07_ruDMk9pZAkY0TpLI9Fdba9uvM4QxsZ7CYqjupiah4CF45BmzY1VXtLpw0WLqHUvwlkQ2O_PSc4RZHQzpoJqR_9KZBKqe-alA8RQBfGMWnDxTa512pM4PLDtHZYoq8h3NiBVQf7tWuZ/s1600/fightclub.jpg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./fightclub.html">
+                    <h3 class="card-title">Fight Club</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, dubbed">
+
+                <a href="./animal.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOTis1-GCXQ5aSvwon7jSXBAgCC6dywYH5aH0EVODfAL6UMP33NzIEUiHKL7khoJvjXPh3V99qS3niRFrbrh2LvpFgux5Mv7muVRloQq9ybLRMQn9G5UvYAltFmP1N8nxvCAjN9adv60os8ou6SXX95_2wBqCV_2LsAaunS52NgGQrFDA7hZBdxEjTwwSf/s1600/animal.jpg" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./animal.html">
+                    <h3 class="card-title">Animal</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="comedy, drama">
+
+                <a href="./4554.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLYZBDPhJ_Lhyphenhyphen4F0Yc7s8acUgcY7JhmZN0_JowFg7vBZ7CC_34ZX5W_L241QEapiqjmjRjQR3vtunn6oivBPoCoz2zdJUFEDp-33le6cYZC_t0U7asfeolca4TSgXpHybpUIyLKGr5CuwfZOvaqjg6R_yX_a8-JrAE9NuspXSbkjLfTcBbkkL_y2J-G91X/s1600/4554.webp" alt="poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./4554.html">
+                    <h3 class="card-title">4554</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="comedy, drama">
+                <a href="./sabanayagan.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSvXxhHC858-QcxuQjFBQI0LXqjkvZwnFZJu8d2a2JbnjCzscb_HcH59nZojBVONL8tlmbzMWtLtposdhlH5UvoCx2xrWodDd-gM7gHDKrEeLnvuSnzwWY9MeJ8YIFeMn5Su5-8RTpZHVe9mBSED8Q6fzl2ivTpDyay6_L4KTWec0ryTRnSjy1APz-b-v8/s1600/sabanayagaran.jpg" alt="poster">
+                  </figure>
+                </a>
+                <div class="title-wrapper">
+                  <a href="./sabanayagan.html">
+                    <h3 class="card-title">Saba Nayagan</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action">
+                <a href="./ayalaan.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2zEiIwZCrSyt5lQ5dxuO7visQUwpNI8hNorIt016PhLZMpToBaamG9rxzhy3R7dPzhxIOffkehyphenhyphen9CKv9bbar3-MfapaCxT58zN5hmUnrhsTq0gR_MNm-d0BkMh_RoJ-_VZatFQkwH29bYRDeZR1YmzwJdboF4AMFRgKmdGE-VxbIMF5bx6fUVNwVq_j-Q/s16000/Ayaalan.jpg" alt="poster">
+                  </figure>
+                </a>
+                <div class="title-wrapper">
+                  <a href="./ayalaan.html">
+                    <h3 class="card-title">Ayalaan</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="drama">
+                <a href="./sivakumarinsabatham.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiIYwCT0QZDwcQfMqS4eZaA1GbM91v4be0rvtssFyOV8_Az3RXQy7dSf9x_TPubl5vryD_-N9HHyMg1SKNbblSdfFOlt1tfmFsHrm2Cqo5Qv4-TOiMBJ3PAwcand-BvaMvSd5jt_6lKr6iEXKJnfaH2YiX2A0lHQINxxY8R62Ydf-dELkwUwsciMERDYID/s1600/sivakumarinsabatham.jpg" alt="poster">
+                  </figure>
+                </a>
+                <div class="title-wrapper">
+                  <a href="./sivakumarinsabatham.html">
+                    <h3 class="card-title">Sivakumarin Sabatham</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card" data-tags="action, crime, thriller">
+                <a href="./sinam.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQw7nZDLz_4h_r0EFYFytoJSwyE0UXZlUvy4Q1CsdjG6WWALd_n0Vu_XYVqgJ-YRJ1QnvpOJs9LQvwJ3CtYILZ5aqAMhN9M6K88DWIC3iAn2TI0X4fTK-IV2HKpqQNYaQrVa51J0wQ94P6cOsvR_ZobueNUOs5p-X4zvg5ivaVliLojUFhcSLjU_TsdSj7/s1600/sinam.jpg" alt="poster">
+                  </figure>
+                </a>
+                <div class="title-wrapper">
+                  <a href="./sinam.html">
+                    <h3 class="card-title">Sinam</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #TV SERIES
+      -->
+
+      <section class="tv-series">
+        <div class="container">
+
+
+          <h2 class="h2 section-title">Kids Movies</h2>
+
+          <ul class="movies-list" id="kidsMoviesList">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_takingtom.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiKJwRNOxDSODU3L8a1asIaAl_8yAqcS6kKsq5roD3eQnsMQyLKhN8pcPXfgTe8KEK_3VZzIF3cXbu8J1sabuSH2fZMZZBrA9ylZZls8k6Z4iy9ki7zoJpmVn1XmhXvhjWL0PazAFztyNy8yqmaN7OuUk4yNA_6DksYoCqP4lc2mfKI7PalcKdvTqir3Vh/s1600/takingtom.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_takingtom.html">
+                    <h3 class="kidscard-title">Talking Tom and Friends</h3>
+                  </a>
+                  </div>
+                </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_superwings.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivH3LLwegrq8wnxcyIZn7uFnElyhR_yNhr4pdWZRzFj2WSMmD-Z6Jnj_unF_5uRyrGvXbrhRRpCSLU5YE-Li8I8OAv1PaBamzWStutCjf5AT3ebtHXqHnPapirsAL7BWPZRQn2L0Lx40CBAwxXDfFfd9w_d0YqZVQVTpYyXz_jt2iVqL0fUYx4w7txZSI5/s1600/superwings.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_superwings.html">
+                    <h3 class="kidscard-title">Super Wings</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_stevemaggie.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFrMKgbzSeJf193Up_EIQmNOm-V9Yl1tUOj1sbMY1WKeTEbUctz2_K6O-2q1wGLFwoQF96mcB0C6gAGG-Sd8U7MnmVkGck5pAOVEzWgoIRV7KMjv8Inmt3zgHJphlwtvy8XzEQ3dniNlnkoZI6BS4FTqLjQphcEEs1FWSzRf0Xc8oqcBX8tDca8US5uisQ/s1600/stevemaggie.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_stevemaggie.html">
+                    <h3 class="kidscard-title">Steve Maggie</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_zigshark.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfWiR2ZEHdpCYkI4QXwq4_l8T8xS0JLmw2vyYIlHTVId2reHXWwKW_qXgNtnPF6Ulj-RRKXYdPOFZe588LmJ4aKEwe6S9ek-qUAqKQ9tkoZduSOvSQqm_50qxybBOBlVgkQw3giQQG7c4ZFevHbOfiJjjXMvEly3t7tLiA97Uol3dyMdngmkXTNsglBPjX/s1600/zigshark.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_zigshark.html">
+                    <h3 class="kidscard-title">Zig Shark</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_takingtomshorts.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkxUK7IYZnfRoFWHr8iLnhAOrmHIwFQZSBUMCoisxdexexaCXcR8eB_XD9re56NG6fej1_dkamUWAPwB0u6YBoQnSFG-UK4TPBMGvmvEjbN9dZAE3tWdBBCDmCRbLpxmi2TLYNtqrl0Ktf9J12HXgWDS4708bbW-iOIxNvExtd-TwiVWPDgHhYMB7KVSfG/s1600/takingtomshorts.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_takingtomshorts.html">
+                    <h3 class="kidscard-title">Taking Tom Shorts</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_popeyefriends.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuzRy29jbvkFOvy6RIcRrQ_3sKxn8JIrH4aUoveza694CUPAHQ6jVHnU4HTlhWnQRUjZJr0zku1EhOCk_4s98kOqrlRnujZP4-PBiNdTG6fQQPIg4aWFZUX1wqya4Mcp8VBVcNZsWZTzpuLgzwVubmFWMXoXbdxNpwfMe5nbB1RNhn-w7n44REuB1_Efm0/s1600/popeyeandfriends.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_popeyefriends.html">
+                    <h3 class="kidscard-title">Popeye and Friends</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_pucca.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMgijyt2cGhXUzK2qLQXB_pT1QcGtXgEOg0mPuYf_hSsTYSHXPzguZjtVijDTP_H1J0Ey70vc_z4MBoOFwZbUgNrdV_kTR2IcNMUit2tBHzinf2s4l0j9bEDRc6Pvb6ewXsdpy9uCKX0LWa2bw-FEo98upVRbVgjaiJtKbFBJKk-XDZ1t3It9xnYE7sPfO/s1600/pucca.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_pucca.html">
+                    <h3 class="kidscard-title">Pucca</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_mani.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC1gSWMx36PApZQPowyZ39o-7ensbRFIb3dPGWUP7A9NO9fo-IzkhQ2fJZ92_eQDwV_YzAuRFYSIkanlZsP1EHmAV03j2jgT9XmXrStGEG1HE3XoCIIhWvIBldJ2jaVbLh3zV_iJaDGr232T844xVMw6B8h1AcGJHgamKublrAYnbW2ePeIk-uwKMvYZaZ/s1600/mani.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_mani.html">
+                    <h3 class="kidscard-title">Mani</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_pacman.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwcWw0MmTCD1P8wEOsILXz8OJV-mO_6j6DJuWLEjC9NKyo-oQBIOZWTgUR2l9tVruIGzhVlANHPccPzu9t-f2ZTk8OoWqA-QFuphQLVnERr29K0Ok0Gz0z0bHGWnmnp_5tI1hvnUKVWshJRQwoavBDXvPW8ZZcvWl84cYg5xHM0AM8arxvqs6IOcBJ3NmS/s1600/pacmon.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_pacman.html">
+                    <h3 class="kidscard-title">Pacman</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_monsuno.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuOeTHKxvy4_MRoM2O9rbbPmlKUUkzjdOcP2QZPvNiV0kUFEbzMvXtuV_UgP_MDyPf4v14Hxk5araD5HIlQn84cno7c4-6hY2MrQtFLbIPmhX5FpkdDnK5QUsiscaNBqidL12l0MvGR8sazWP7X2HO1n9OPOwy20Ie-Ui2VuRomUUoQhp72_jjk4xNUQEk/s1600/monsuno.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_monsuno.html">
+                    <h3 class="kidscard-title">Monsuno</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_tarzanandjane.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw6Y2gJqqXHLmEID3iBhLWoj5DHnSjNVD4R7GoHmnn8YazOYl5sEMY4wlNK6ggy8W4DjrMdcX2CKdpfKNguAW0cCO4chS0FZgf1gXlJWpVnAPtWayb1pMZTLws-Mdm7Aw7cLhZFNi5IhM6F5ZzpY5NqEyb4cDkeZgdpBLnPTUYAdRjwk8WmE9Y7PE5Ox06/s1600/tarzanandjane.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_tarzanandjane.html">
+                    <h3 class="kidscard-title">Tarzan and Jane</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./kids_minis.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgT_YGLlUEpUjSDUpHMA5Tw1GcFcjBU_VlI6C-CVBQ15Bu82xYgneWAo7yPW4YlPHhSHo43yqJQ8jyVLUtEVyt6YlBK7dDfe4muOn5am4itIryTyZB1CUGC2gI9vWqJ2XeZCuKuYcQt5f5WviRv67C6jlIfXh_fCXb6DYuAjw76qCbmbSeQfcvS0ea2X0b/s1600/minis.png" alt="kidsmovie">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./kids_minis.html">
+                    <h3 class="kidscard-title">Minis</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+      </section>
+
+
+
+ <!-- 
+        - #UPCOMING
+      -->
+
+      <section class="upcoming">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">             
+
+              <h2 class="h2 section-title">Upcoming Movies : Trailer</h2>
+            </div>
+
+            <ul class="filter-list">
+
+              <!--<li>
+                <button href="#top-rated" class="filter-btn" >Movies</button>
+              </li>
+
+              <li>
+                <button class="filter-btn" id="kidsMovieButton">Kids Movies</button>
+              </li>-->
+
+ 
+
+            </ul>
+
+          </div>
+
+          <ul class="movies-list  has-scrollbar">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./upcoming1.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTlwqU1bILp4e_g29tDenJiU5k7Dn8SI_Bsvxbidxh8rtFqHJy8udbtwMTHTorFKSqxAEuVzRerNvH6mNopzJY4c4PTGCLdlvcbOVm7H4lF4kAlahs_goI9DsIGhHBdR7AorUolHAXvbONxbsmdr-bu_ePsp2BFkQikweP4tdwT9EWflriIgxWg8lO-tdV/s1600/singaporesaloon.jpg" alt="upcoming1">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./upcoming1.html">
+                    <h3 class="card-title">Singapore Saloon</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./upcoming2.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh70ODGjj0gCrW5ES5YNtnv6yyVYaoS0d3S5sdi1etfvDHHN-LlTW6ewXZ0afQIEO7ObKmoovhlFd1MS_wKwH417LkirlypEDVJNulS3mYYLNF42ptsHxsRiMX9ubfGGi44s6354E9jrinzERSsiU8vj1ASZaS3TsMFxJkygWS0lt5gdxCMge1-wYbwlYa0/s1600/bluestar.jpeg" alt="upcoming2">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./upcoming2.html">
+                    <h3 class="card-title">Blue Star</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./upcoming3.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsiGOQSyno8ZKPR8ijFswz9msWFtOdlUPy6pEyp6xEbbktzbztgb3mRSl4kHOPNKYFNbKuXSVILEQoDoaRIBv8m5FvtlP2eJON4TKn-4evIU6IuV5p8jY5hDA3QcDT8kuloLghqzxRXkC5IzlShUBvgZhUJYyQ1RGq2DJdjjUwaYUaKBLWD8WD8OtRE3XR/s1600/vadakkupatti.png" alt="upcoming3">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./upcoming3.html">
+                    <h3 class="card-title">Vadakkupatti Ramasamy</h3>
+                  </a>
+                  </div>
+                </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./upcoming4.html">
+                  <figure class="card-banner">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhpOIyGdcHWp3bUXjfd1h8Z8Sn9gsDgnOsCHRFqrhSY8Z2Amp8N_t2Vcb-Zfz5JYxhcchTW9WmnaPuH_7jxDJHKWWfTyiJz5UL31eJOrlx5q4y6aPwyMfpChizfzmxykk-6ZiZCljNGEzpK6Q1aVGZIiHf2Lsds_wu2Q0eO_ZPUd3KLEOXMCK_iYj-Gp0p/s1600/lalsalam.png"
+                      alt="upcoming4">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./upcoming4.html">
+                    <h3 class="card-title">Lal Salaam</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="cta-title">Chillax Zoom</h2>
+
+            <p class="cta-text">
+              This website is for personal entertainment purposes only.
+            </p>
+          </div>
+
+          <form action="" class="cta-form">
+            <input type="email" name="email" required placeholder="Enter your email" class="email-field">
+
+            <button type="submit" class="cta-form-btn">Send</button>
+          </form>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.png" alt="Chillaxzoom logo">
+          </a>
+
+        <ul class="navbar-list">
+
+         <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="./aboutus.html" class="navbar-link" id="actionButton">About Us</a>
+          </li>
+
+          <li>
+            <a href="./contact.html" class="navbar-link" id="crimeButton">Contact</a>
+          </li>
+
+          <li>
+            <a href="./policy.html" class="navbar-link" id="thrillerButton">Policy</a>
+          </li>
+
+
+        </ul> 
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 <a href="#">Chillax Multimedia</a>. All Rights Reserved
+        </p>
+
+        <img src="./assets/images/footer-bottom.png" alt="Online banking companies logo" class="footer-bottom-img">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="./index.html" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
