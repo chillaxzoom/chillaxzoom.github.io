@@ -137,7 +137,10 @@ span.disable-links {
  * #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
+.container {
+    padding-inline: 120px;
+    margin: -100px;
+}
 
 /**
  * TITLES & SUBTITLES
