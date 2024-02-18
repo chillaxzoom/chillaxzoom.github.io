@@ -125,6 +125,10 @@ body { background: var(--eerie-black); }
 
 body.active { overflow: hidden; }
 
+span.disable-links {
+    pointer-events: none;
+}
+
 
 
 
