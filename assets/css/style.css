@@ -1187,6 +1187,7 @@ color: #42f49b;
   .container {
     max-width: 540px;
     margin-inline: auto;
+    margin-top: -150px;
   }
 
   /* MOVIE CARD */
