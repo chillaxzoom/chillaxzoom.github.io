@@ -899,38 +899,6 @@
   </a>
 
 
-<style>
-    @keyframes FlyAnimation {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-        100% { transform: translateY(0); }
-    }
-</style>
-
-
-<p id="totalOnline" style="position: absolute; padding-top: 3px; font-size: 13px; color: #424242; text-shadow: 0 1px #737373; font-family: Helvetica;">
-    Total Online: <b id="userCounter"></b>
-</p>
-
-<script>
-    var FlyAnimationVAR = "<p style='position: absolute; padding-bottom: 0px; padding-left: 75px; color: #007cc9; animation: FlyAnimation 2s infinite ease-in-out;'> ";
-    var CssStyleInsideJavaVAR = "<p style='position: absolute; padding-top: 3px; font-size: 13px; color: #424242; text-shadow: 0 1px #737373; font-family: Helvetica;'>";
-
-    function UserCounterFunction() {
-        // Sample user counter function, replace this with your actual implementation
-        return Math.floor(Math.random() * 1000); // Random value for demonstration
-    }
-
-    function updateCounter() {
-        document.getElementById('userCounter').textContent = UserCounterFunction();
-        setTimeout(updateCounter, 2000); // Update every 2 seconds
-    }
-
-    document.write(CssStyleInsideJavaVAR + "Total Online: " + "<b>" + FlyAnimationVAR);
-    updateCounter();
-</script>
-
-
 
   <!-- 
     - custom js link
