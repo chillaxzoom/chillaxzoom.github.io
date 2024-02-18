@@ -1388,7 +1388,10 @@ color: #42f49b;
 
   .copyright { margin-bottom: 0; }
 
-  .footer-bottom-img { margin-inline: 0; }
+  .footer-bottom-img 
+  { margin-inline: 0; 
+  margin-top: 10px;
+  }
 
 
 
