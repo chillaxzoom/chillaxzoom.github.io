@@ -1691,7 +1691,10 @@ color: #42f49b;
 
 /* Mobile view */
   @media only screen and (max-width: 767px) {
- 
+.container {
+  margin-top: 10px;
+}
+    
   }
 
 
