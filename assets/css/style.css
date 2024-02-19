@@ -1560,7 +1560,7 @@ color: #42f49b;
     display: flex;
     align-items: center;
     gap: 50px;
-  
+  margin-top: 50px;
   }
 
   .movie-detail-banner,
