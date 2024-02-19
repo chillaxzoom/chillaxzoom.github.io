@@ -265,16 +265,22 @@ topRatedSection.style.marginTop = '100px';
     }
 });
 
-document.getElementById('actionButton').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default behavior of the link
-    document.getElementById('actionContent').style.display = 'block'; // Show the action content
-    document.querySelector('.navbar-list').style.display = 'none'; // Hide the navbar list
-  });
+// Get all navbar links
+  const navbarLinks = document.querySelectorAll('.navbar-link');
 
-  document.getElementById('crimeButton').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default behavior of the link
-    document.getElementById('crimeContent').style.display = 'block'; // Show the crime content
-    document.querySelector('.navbar-list').style.display = 'none'; // Hide the navbar list
+  // Loop through each navbar link and attach click event listener
+  navbarLinks.forEach(function(navbarLink) {
+    navbarLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default behavior of the link
+      document.querySelector('.navbar-list').style.pointerEvents = 'none'; // Disable navbar list
+
+      // Show corresponding content
+      if (navbarLink.id === 'actionButton') {
+        document.getElementById('actionContent').style.display = 'block';
+      } else if (navbarLink.id === 'crimeButton') {
+        document.getElementById('crimeContent').style.display = 'block';
+      }
+    });
   });
 
 
