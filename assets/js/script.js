@@ -265,7 +265,17 @@ topRatedSection.style.marginTop = '100px';
     }
 });
 
+document.getElementById('actionButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    document.getElementById('actionContent').style.display = 'block'; // Show the action content
+    document.querySelector('.navbar-list').style.display = 'none'; // Hide the navbar list
+  });
 
+  document.getElementById('crimeButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    document.getElementById('crimeContent').style.display = 'block'; // Show the crime content
+    document.querySelector('.navbar-list').style.display = 'none'; // Hide the navbar list
+  });
 
 
  // JavaScript function to show the video player and hide the movie detail section
