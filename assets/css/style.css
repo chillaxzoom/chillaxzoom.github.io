@@ -1692,7 +1692,7 @@ color: #42f49b;
 /* Mobile view */
   @media only screen and (max-width: 767px) {
 .mobile-detail {
-  margin-top : 100px;
+  padding-top : 100px;
 }
 
 .download-btn {
