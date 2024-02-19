@@ -265,20 +265,24 @@ topRatedSection.style.marginTop = '100px';
     }
 });
 
-// Get all navbar links
+  // Get all navbar links
   const navbarLinks = document.querySelectorAll('.navbar-link');
 
   // Loop through each navbar link and attach click event listener
   navbarLinks.forEach(function(navbarLink) {
     navbarLink.addEventListener('click', function(event) {
       event.preventDefault(); // Prevent default behavior of the link
-      document.querySelector('.navbar-list').style.pointerEvents = 'none'; // Disable navbar list
 
       // Show corresponding content
       if (navbarLink.id === 'actionButton') {
         document.getElementById('actionContent').style.display = 'block';
       } else if (navbarLink.id === 'crimeButton') {
         document.getElementById('crimeContent').style.display = 'block';
+      }
+
+      // Check if it's desktop view, then disable navbar
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        document.querySelector('.navbar-list').style.pointerEvents = 'none'; // Disable navbar list
       }
     });
   });
