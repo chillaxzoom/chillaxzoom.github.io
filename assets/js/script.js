@@ -197,7 +197,7 @@ topRatedSection.style.marginTop = '100px';
       moviesList.style.display = 'none';
       topRatedSection.style.display = 'none';  
       kidsMoviesList.style.display = '';   
-     
+      tvSeriesSection.style.margin = '30px';
     }
   });
 
