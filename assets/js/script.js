@@ -246,6 +246,8 @@ document.getElementById('dramaButton').addEventListener('click', function() {
 
 // Event listener for button click
 document.getElementById('dubbedButton').addEventListener('click', function() {
+  var tvSeriesSection = document.querySelector('.tv-series');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
    tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
