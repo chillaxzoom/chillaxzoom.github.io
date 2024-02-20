@@ -194,7 +194,6 @@ topRatedSection.style.marginTop = '100px';
       slider.style.display = 'none' ; 
       moviesList.style.display = 'none';
       kidsMoviesList.style.display = '';
-topRatedSection.style.marginTop = '100px';
 
     }
   });
