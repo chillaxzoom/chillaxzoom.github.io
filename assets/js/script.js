@@ -30,6 +30,8 @@ navLinks.forEach(link => {
 });
 
 
+
+
 /**
  * header sticky
  */
@@ -197,6 +199,7 @@ topRatedSection.style.marginTop = '100px';
     }
   });
 
+
 // Event listener for button click
 document.getElementById('actionButton').addEventListener('click', function() {
   // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
@@ -269,7 +272,6 @@ var containerDiv = document.querySelector('.container');
   kidsMoviesList.style.display = '';
   tvSeriesSection.style.margin = '30px';
 });
-
 
 
 
@@ -359,9 +361,3 @@ var containerDiv = document.querySelector('.container');
       var videoPlayer = document.getElementById("videoPlayer");
       videoPlayer.play();
     }
-
-
-
-
-  
-
