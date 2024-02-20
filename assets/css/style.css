@@ -1462,7 +1462,7 @@ color: #42f49b;
     font-size: var(--fs-9);
     font-weight: var(--fw-700);
     text-transform: capitalize;
-    padding: 5px 15px;
+    padding: 5px 10px;
   }
 
   .overlay { display: none; }
