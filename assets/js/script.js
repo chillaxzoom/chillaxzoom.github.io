@@ -186,7 +186,6 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
   // Event listener for select change
   document.getElementById('movieType').addEventListener('change', function() {
     var tvSeriesSection = document.querySelector('.tv-series');
-    var containerDiv = document.querySelector('.container');
     var movieType = this.value;
     if (movieType === 'movies') {
       moviesList.style.display = '';
