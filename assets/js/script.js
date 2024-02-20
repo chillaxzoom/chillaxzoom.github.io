@@ -198,6 +198,64 @@ topRatedSection.style.marginTop = '100px';
   });
 
 // Event listener for button click
+document.getElementById('actionButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('crimeButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('thrillerButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('horrorButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('comedyButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('dramaButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+// Event listener for button click
+document.getElementById('dubbedButton').addEventListener('click', function() {
+  // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+  slider.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
+ moviesList.style.display = '';
+});
+
+
+
+// Event listener for button click
 document.getElementById('kidsButton').addEventListener('click', function() {
   // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
   slider.style.display = 'none';
