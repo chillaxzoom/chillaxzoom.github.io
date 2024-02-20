@@ -185,16 +185,23 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
   // Event listener for select change
   document.getElementById('movieType').addEventListener('change', function() {
+    var tvSeriesSection = document.querySelector('.tv-series');
+var containerDiv = document.querySelector('.container');
+
     var movieType = this.value;
     if (movieType === 'movies') {
+
+ topRatedSection.style.display = ''; 
       moviesList.style.display = '';
-      slider.style.display = 'none' ; 
-topRatedSection.style.marginTop = '100px';
+      slider.style.display = 'none' ;       
+
     } else if (movieType === 'kidsmovies') {
-      slider.style.display = 'none' ; 
-      moviesList.style.display = 'none';
-      kidsMoviesList.style.display = '';
-topRatedSection.style.marginTop = '100px';
+
+  slider.style.display = 'none';
+  moviesList.style.display = 'none';
+   topRatedSection.style.display = 'none';   
+  kidsMoviesList.style.display = '';
+
 
     }
   });
@@ -280,7 +287,7 @@ var containerDiv = document.querySelector('.container');
   moviesList.style.display = 'none';
    topRatedSection.style.display = 'none';   
   kidsMoviesList.style.display = '';
-  tvSeriesSection.style.margin = '30px';
+  tvSeriesSection.style.marginTop = '50px';
 });
 
 
@@ -371,3 +378,9 @@ var containerDiv = document.querySelector('.container');
       var videoPlayer = document.getElementById("videoPlayer");
       videoPlayer.play();
     }
+
+
+
+
+  
+
