@@ -185,71 +185,89 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
   // Event listener for select change
   document.getElementById('movieType').addEventListener('change', function() {
-var containerDiv = document.querySelector('.container');
-    
     var movieType = this.value;
     if (movieType === 'movies') {
       moviesList.style.display = '';
       slider.style.display = 'none' ; 
-       kidsMoviesList.style.display = 'none';
-
+topRatedSection.style.marginTop = '100px';
     } else if (movieType === 'kidsmovies') {
       slider.style.display = 'none' ; 
       moviesList.style.display = 'none';
-      topRatedSection.style.display = 'none';  
-      kidsMoviesList.style.display = '';   
-      tvSeriesSection.style.margin-top = '20px';
+      kidsMoviesList.style.display = '';
+topRatedSection.style.marginTop = '100px';
+
     }
   });
 
 
 // Event listener for button click
 document.getElementById('actionButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-   tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('crimeButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-   tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('thrillerButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-   tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('horrorButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-  tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('comedyButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-  tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('dramaButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-  tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+
 });
 
 // Event listener for button click
 document.getElementById('dubbedButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
-   tvSeriesSection.style.display = 'none';
+   kidsMoviesList.style.display = 'none';
  moviesList.style.display = '';
+  
 });
 
 
@@ -262,7 +280,7 @@ var containerDiv = document.querySelector('.container');
   moviesList.style.display = 'none';
    topRatedSection.style.display = 'none';   
   kidsMoviesList.style.display = '';
-  tvSeriesSection.style.margin-top = '20px';
+  tvSeriesSection.style.margin = '30px';
 });
 
 
