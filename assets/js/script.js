@@ -191,7 +191,7 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
       moviesList.style.display = '';
       slider.style.display = 'none' ; 
        kidsMoviesList.style.display = 'none';
-topRatedSection.style.marginTop = '100px';
+
     } else if (movieType === 'kidsmovies') {
       slider.style.display = 'none' ; 
       moviesList.style.display = 'none';
