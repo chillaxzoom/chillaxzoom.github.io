@@ -197,7 +197,7 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
       moviesList.style.display = 'none';
       topRatedSection.style.display = 'none';  
       kidsMoviesList.style.display = '';   
-      tvSeriesSection.style.margin = '30px';
+      tvSeriesSection.style.margin = '40px';
     }
   });
 
