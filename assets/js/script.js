@@ -191,6 +191,7 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
     if (movieType === 'movies') {
       moviesList.style.display = '';
       slider.style.display = 'none' ; 
+      tvSeriesSection.style.display = 'none';
 topRatedSection.style.marginTop = '100px';
     } else if (movieType === 'kidsmovies') {
       slider.style.display = 'none' ; 
@@ -205,49 +206,49 @@ topRatedSection.style.marginTop = '100px';
 // Event listener for button click
 document.getElementById('actionButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+   tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('crimeButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+   tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('thrillerButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+   tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('horrorButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+  tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('comedyButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+  tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('dramaButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+  tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
 // Event listener for button click
 document.getElementById('dubbedButton').addEventListener('click', function() {
   slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
+   tvSeriesSection.style.display = 'none';
  moviesList.style.display = '';
 });
 
