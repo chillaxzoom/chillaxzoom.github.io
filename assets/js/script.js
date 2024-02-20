@@ -258,11 +258,18 @@ document.getElementById('dubbedButton').addEventListener('click', function() {
 // Event listener for button click
 document.getElementById('kidsButton').addEventListener('click', function() {
   // Assuming you have defined the necessary variables like moviesList, slider, kidsMoviesList, and topRatedSection
+// Select the section element with class "tv-series"
+var tvSeriesSection = document.querySelector('.tv-series');
+
+// Select the div element with class "container"
+var containerDiv = document.querySelector('.container');
   slider.style.display = 'none';
   moviesList.style.display = 'none';
+   topRatedSection.style.display = 'none';   
   kidsMoviesList.style.display = '';
-  topRatedSection.style.marginTop = '100px';
+  tvSeriesSection.style.margin = '30px';
 });
+
 
 
 
