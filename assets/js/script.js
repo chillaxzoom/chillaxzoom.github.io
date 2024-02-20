@@ -185,6 +185,7 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
   // Event listener for select change
   document.getElementById('movieType').addEventListener('change', function() {
+    var containerDiv = document.querySelector('.container');
     var movieType = this.value;
     if (movieType === 'movies') {
       moviesList.style.display = '';
@@ -193,8 +194,8 @@ topRatedSection.style.marginTop = '100px';
     } else if (movieType === 'kidsmovies') {
       slider.style.display = 'none' ; 
       moviesList.style.display = 'none';
-      kidsMoviesList.style.display = '';
-topRatedSection.style.display = 'none';   
+      topRatedSection.style.display = 'none';  
+      kidsMoviesList.style.display = '';      
     }
   });
 
