@@ -467,6 +467,7 @@ span.disable-links {
 .menu-open-btn {
   color: var(--white);
   font-size: 40px;
+  margin-left: -15px
 }
 
 .navbar {
@@ -1726,23 +1727,23 @@ color: #0DFF5D;
     display: flex;
     margin-left: auto;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    margin-left: -70px;
   }
 
   .header-actions .btn-primary { display: none; }
- .search-box {display: none;}
- .lang-wrapper {display: none;}
- .footer-search form input {
-    width: 75%; }
+   .search-box {display: none;}
 
-    
+ .lang-wrapper {display: none;}
+
+ 
   .search-btn {
     position: relative;
     color: var(--white);
 
   }
 
-  .search-btn ion-icon { --ionicon-stroke-width: 80px; }
+  .search-btn ion-icon { --ionicon-stroke-width: 20px; }
 
   .search-btn::after {
     content: "";
@@ -1831,14 +1832,14 @@ select, button {
     margin-left: 30px;
 }
 .footer-search form input {
-    width: 100%;
+    width: 75%;
     border: none;
     background: #ffffff;
     color: #000000;
     padding: 3px 10px;
     font-size: 12px;
     border-radius: 30px;
-    padding-right: 60px;
+    padding-right: 10px;
     box-shadow: inset 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
 }
 .footer-search form input::placeholder {
