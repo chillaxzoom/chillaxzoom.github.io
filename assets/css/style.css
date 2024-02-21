@@ -60,10 +60,6 @@
 
 }
 
-
-
-
-
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
@@ -618,7 +614,7 @@ span.disable-links {
   padding-block: 30px;
 }
 
-.upcoming .flex-wrapper { margin-bottom: 50px; }
+.upcoming .flex-wrapper { margin-bottom: 20px; }
 
 .upcoming .section-title 
 { margin-bottom: 30px; 
@@ -1296,6 +1292,7 @@ color: #0DFF5D;
   .search-btn {
     position: relative;
     color: var(--white);
+
   }
 
   .search-btn ion-icon { --ionicon-stroke-width: 80px; }
@@ -1697,6 +1694,63 @@ color: #0DFF5D;
     margin-top: -10px; /* Adjust margin to reduce line-to-line spacing */
   }
 
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 36px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  
+
+  /**
+   * HEADER
+   */
+
+  .header .container { gap: 20px; }
+
+  .header-actions {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-actions .btn-primary { display: none; }
+ .search-box {display: none;}
+ .lang-wrapper {display: none;}
+
+  .search-btn {
+    position: relative;
+    color: var(--white);
+
+  }
+
+  .search-btn ion-icon { --ionicon-stroke-width: 80px; }
+
+  .search-btn::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: -20px;
+    background: hsla(0, 0%, 100%, 0.1);
+    width: 2px;
+    height: 14px;
+  }
+
 .card-title {
   display: block;
   text-align: center;
@@ -1741,13 +1795,8 @@ color: #0DFF5D;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 10px;
-}
-  
-    .star ion-icon {
-        margin-right: 10px; /* Add a margin of 10px to the right of the ion-icon */
-        width: 22px;
-        height:22px;
-    }
+} 
+
 
   }
 
