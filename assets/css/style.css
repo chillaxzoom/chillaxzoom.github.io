@@ -1033,7 +1033,7 @@ color: #0DFF5D;
   background: url("../images/movie-detail-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: var(--section-padding);
 }
 
