@@ -252,7 +252,7 @@ span.disable-links {
   transition: var(--transition-1);
 }
 
-.btn > ion-icon { font-size: 18px; }
+.btn > ion-icon { font-size: 20px; }
 
 .btn-primary { background: var(--rich-black-fogra-29); }
 
@@ -467,7 +467,7 @@ span.disable-links {
 .menu-open-btn {
   color: var(--white);
   font-size: 40px;
-  margin-left: -15px
+  margin-left: -10px
 }
 
 .navbar {
@@ -1687,7 +1687,8 @@ color: #0DFF5D;
 
 /* Mobile view */
   
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 767px)   {
+
  .movies-list { 
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Display two items per row */
@@ -1695,65 +1696,36 @@ color: #0DFF5D;
     margin-top: -10px; /* Adjust margin to reduce line-to-line spacing */
   }
 
-  /**
-   * CUSTOM PROPERTY
-   */
-
-  :root {
-
-    /**
-     * typography
-     */
-
-    --fs-2: 36px;
-
+   .header .container { 
+    gap: 10px; 
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
-
-  
-
-  /**
-   * HEADER
-   */
-
-  .header .container { gap: 20px; }
 
   .header-actions {
     display: flex;
     margin-left: auto;
     align-items: center;
     gap: 5px;
-    margin-left: -70px;
   }
 
-  .header-actions .btn-primary { display: none; }
-   .search-box {display: none;}
+  .header-actions .btn-primary { 
+    display: none;
+     }
 
- .lang-wrapper {display: none;}
-
- 
-  .search-btn {
-    position: relative;
-    color: var(--white);
-
+   .search-box {
+    display: none;
   }
 
-  .search-btn ion-icon { --ionicon-stroke-width: 20px; }
+    .footer-search form {
+        min-width: 120px !important;
+        position: relative;
+        margin-left: 10px;
+        width: 120px;
+    }
 
-  .search-btn::after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    right: -20px;
-    background: hsla(0, 0%, 100%, 0.1);
-    width: 2px;
-    height: 14px;
-  }
+
+ .lang-wrapper {
+  display: none;
+}
 
 .card-title {
   display: block;
@@ -1826,13 +1798,14 @@ select, button {
     
 }
 
-.footer-search form {
-    min-width: 185px;
-    position: relative;
-    margin-left: 30px;
-}
+    .footer-search form {
+        min-width: 180px;
+        position: relative;
+        margin-left: 10px;
+    }
+
 .footer-search form input {
-    width: 75%;
+    width: 100%;
     border: none;
     background: #ffffff;
     color: #000000;
@@ -1849,7 +1822,7 @@ select, button {
 }
 .footer-search form button {
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 50%;
     transform: translateY(-50%);
     border: none;
