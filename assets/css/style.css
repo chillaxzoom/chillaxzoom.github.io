@@ -1732,7 +1732,10 @@ color: #0DFF5D;
   .header-actions .btn-primary { display: none; }
  .search-box {display: none;}
  .lang-wrapper {display: none;}
+ .footer-search form input {
+    width: 75%; }
 
+    
   .search-btn {
     position: relative;
     color: var(--white);
