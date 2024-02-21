@@ -183,29 +183,32 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
     }
   });
 
-  // Event listener for select change
-  document.getElementById('movieType').addEventListener('change', function() {
+
+// Event listener for select change
+document.getElementById('movieType').addEventListener('change', function() {
     var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-
+    var containerDiv = document.querySelector('.container');
     var movieType = this.value;
+    
     if (movieType === 'movies') {
-
- topRatedSection.style.display = ''; 
-      moviesList.style.display = '';
-      slider.style.display = 'none' ;       
-topRatedSection.style.marginTop = '60px';
-
+        topRatedSection.style.display = ''; 
+        moviesList.style.display = '';
+        slider.style.display = 'none';       
+        topRatedSection.style.marginTop = '60px';
     } else if (movieType === 'kidsmovies') {
-
-  slider.style.display = 'none';
-  moviesList.style.display = 'none';
-   topRatedSection.style.display = 'none';   
-  kidsMoviesList.style.display = '';
-tvSeriesSection.style.marginTop = '20px';
-
+        slider.style.display = 'none';
+        moviesList.style.display = 'none';
+        topRatedSection.style.display = 'none';   
+        kidsMoviesList.style.display = '';
+        tvSeriesSection.style.marginTop = '20px';
+    } else {
+        // If movieType is not 'movies' or 'kidsmovies', show "Not Found" message in an alert window
+        alert('Not Found');
     }
-  });
+});
+
+
+
 
 
 // Event listener for button click
@@ -410,4 +413,5 @@ var containerDiv = document.querySelector('.container');
       // Play the video
       var videoPlayer = document.getElementById("videoPlayer");
       videoPlayer.play();
-    }
+    }  
+
