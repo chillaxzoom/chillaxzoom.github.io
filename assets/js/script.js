@@ -338,6 +338,7 @@ var containerDiv = document.querySelector('.container');
     const thrillerButton = document.getElementById("thrillerButton"); // Corrected ID
     const horrorButton = document.getElementById("horrorButton");
     const comedyButton = document.getElementById("comedyButton");
+    const dramaButton = document.getElementById("romanceButton");
     const dramaButton = document.getElementById("dramaButton");
     const dubbedButton = document.getElementById("dubbedButton"); 
     const slider = document.getElementById('slider');  
@@ -373,6 +374,12 @@ var containerDiv = document.querySelector('.container');
         slider.style.display = 'none';
         topRatedSection.style.marginTop = '100px';
     });
+
+       dramaButton.addEventListener("click", function () {
+        filterMovies("romance");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });   
 
     dramaButton.addEventListener("click", function () {
         filterMovies("drama");
