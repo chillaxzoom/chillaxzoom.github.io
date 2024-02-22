@@ -375,7 +375,7 @@ var containerDiv = document.querySelector('.container');
         topRatedSection.style.marginTop = '100px';
     });
 
-       dramaButton.addEventListener("click", function () {
+       romanceButton.addEventListener("click", function () {
         filterMovies("romance");
         slider.style.display = 'none';
         topRatedSection.style.marginTop = '100px';
