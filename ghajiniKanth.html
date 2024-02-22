@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chillax Zoom</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Chillaxzoom logo">
+      </a>
+
+      <div class="header-actions">
+
+ 
+        <!--<button class="btn btn-primary">Sign in</button>-->
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Chillaxzoom logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>       
+
+      </nav>
+
+    </div>
+
+  </header>
+
+<body>
+
+  
+  <main>
+    <article>
+
+      <section class="movie-detail">
+        <div class="container">
+
+          <figure class="movie-detail-banner" id="banner">
+
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh__UvVi6ggWt2_8Llhyphenhyphene9ju2qMB7xegkKNuJPO632Gycco_HUIEmsbZAKPHUUAYN_0UjjchsCkXeh4B5auVdDHIcK6x-6-RDO9H_XflXJKNX7CjaP6nVQKyd15SaVNTM8Jr6JGZBVXdQz4Eu-3t40QTQzk7HY8MUVci-9iUQP9yQtPqmGzjG3NbU27zcLr/s1600/b00348b0d714e9d5961329946366ba28.jpg" alt="movie" >
+
+            <a class="play-btn" onclick="showVideoPlayer()"><ion-icon name="play-circle-outline"></ion-icon></a>
+
+          </figure>
+
+          <div class="movie-detail-content" id="content">
+
+            <h1 class="h1 detail-title" id="title"><strong>GhajiniKanth</strong></h1>
+
+            <div class="meta-wrapper">
+
+              <div class="badge-wrapper">
+                <div class="badge badge-fill">U</div>
+
+                <div class="badge badge-outline">HD</div>
+              </div>
+
+              <div class="ganre-wrapper">
+                 <a href="#">Comedy, Drama</a>               
+
+              </div>
+
+              <div class="date-time">
+
+                <div>
+                  <ion-icon name="calendar-outline"></ion-icon>
+
+                  <time datetime="2021">2018</time>
+                </div>
+
+                <div>
+                  <ion-icon name="time-outline"></ion-icon>
+
+                  <time datetime="PT115M">2:17:00</time>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="star">
+    <ion-icon name="star"></ion-icon>
+    <data>Arya, Sayyeshaa, Sathish, Karunakaran, Rajendran</data>
+</div>
+
+<div class="director">
+    <div class="user">
+        <i class="fa fa-user"></i>
+        <data>Santhosh P.Jayakumar</data>
+    </div>
+    <div class="music">
+        <i class="fa fa-music"></i>
+        <data>Balamurali Balu</data>
+    </div>
+</div> <br/>
+
+            <p class="storyline">
+              An easily distracted youngster goes to great lengths to make sure that his girlfriend and her family members don't find out about his mental condition.
+
+            <div class="details-actions">
+      
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZAqdPKalcms-yh5P7BOodwJmHXUz9gjIF8qZPaARGQ7xwgzt7EcC1o4qAFjqGzVpkf_XCpK4cffZNnWTUWsBGLewCSaO5DJmfpCyc4XUJiq0_i-IrJPbLO0NFOZErXAUpiNMESGxAAmL3KJJKmFVsZbqVcodhfstax9UlCUL01dpYEuS6yG4g_AgSJD9z/s1600/chillax_player.png" alt="Chillax Zoom" width="46" height="46" />
+              
+
+              <div class="title-wrapper">
+                <p class="title">Chillax Zoom</p>
+
+                <p class="text">The Chillax Family</p>
+              </div>
+
+              <button class="btn btn-primary" id="watchNowButton" onclick="showVideoPlayer()"> 
+              <ion-icon name="play"></ion-icon>
+              <span id="watchText">Watch Now</span>
+            </button>
+
+              <a href="./index.html">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiB5g9QSgY-WnJDTwzgJUExPH7aLI5yfHXJHrPgZ9MJP0A8Ce90dX94paGWqAr9GoHNW7yrk6FHqdB75NhLCOEPJoSiJPREXeMy9fmK0jwI7o_bJQYV9rDrN-2M3k8PzXy8Lr-y6a8zPRssLTbu3etgdhYOcPsj1S5qbTvd_rAcqdj7GMpcDmkF4FLAIP_M/s1600/back.png" alt="Chillax Zoom" width="46" height="46">
+              </a>
+            </div>
+
+            <a href="https://storage.googleapis.com/chillaxplay/Ghajinikanth.mp4" download class="download-btn">
+              
+              <span>Download</span>
+
+              <ion-icon name="download-outline"></ion-icon>
+            </a>
+
+          </div>
+
+ <!-- Video player container -->
+          <div id="videoPlayerContainer">
+            <!-- Video player -->
+            <video id="videoPlayer" controls>
+              <source src="https://storage.googleapis.com/chillaxplay/Ghajinikanth.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+  
+</body>
+
+</html>
