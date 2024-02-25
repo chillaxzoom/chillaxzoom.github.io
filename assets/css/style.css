@@ -1607,6 +1607,14 @@ color: #0DFF5D;
 
   .movies-list { grid-template-columns: repeat(6, 1fr); }
 
+  .movie-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   
+}
+
+
   /**
    * HEADER
    */
