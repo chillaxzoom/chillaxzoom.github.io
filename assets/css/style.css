@@ -1717,6 +1717,15 @@ color: #0DFF5D;
   
   @media only screen and (max-width: 767px)   {
 
+    #slider {
+    position: relative;
+    width: 60%;
+    height: 42vw;
+    margin: 100px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+}
  .movies-list { 
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Display two items per row */
