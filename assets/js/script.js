@@ -423,7 +423,7 @@ var containerDiv = document.querySelector('.container');
     }  
 
 
-<script>
+
     function downloadVideo() {
         var videoUrl = document.getElementById("downloadLink").href;
         var fileName = videoUrl.substring(videoUrl.lastIndexOf("/") + 1);
@@ -442,4 +442,4 @@ var containerDiv = document.querySelector('.container');
         // Clean up
         document.body.removeChild(downloadLink);
     }
-</script>
+
