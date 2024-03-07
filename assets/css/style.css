@@ -1063,7 +1063,7 @@ color: #0DFF5D;
   transition: var(--transition-1);
 }
 
-.play-btn:hover { background: hsla(0, 0%, 0%, 0.25); }
+.play-btn:hover { background: hsla(0, 0%, 0%, 0.25); cursor:pointer;}
 
 .detail-subtitle {
   font-size: var(--fs-5);
