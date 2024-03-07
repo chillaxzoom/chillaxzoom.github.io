@@ -422,3 +422,24 @@ var containerDiv = document.querySelector('.container');
       videoPlayer.play();
     }  
 
+
+<script>
+    function downloadVideo() {
+        var videoUrl = document.getElementById("downloadLink").href;
+        var fileName = videoUrl.substring(videoUrl.lastIndexOf("/") + 1);
+
+        // Create a temporary anchor element to trigger download
+        var downloadLink = document.createElement("a");
+        downloadLink.href = videoUrl;
+        downloadLink.download = fileName;
+
+        // Append the anchor element to the body
+        document.body.appendChild(downloadLink);
+
+        // Trigger the click event on the anchor element
+        downloadLink.click();
+
+        // Clean up
+        document.body.removeChild(downloadLink);
+    }
+</script>
