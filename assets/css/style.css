@@ -453,7 +453,7 @@ span.disable-links {
 
 .header.active {
   background: var(--eerie-black);
-  padding-block: 20px;
+  padding-block: 10px;
 }
 
 .header .container {
