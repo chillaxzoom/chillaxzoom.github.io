@@ -133,15 +133,15 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
  
 
 
- // JavaScript for filtering and arranging movies
+// JavaScript for filtering and arranging movies
 var moviesList = document.getElementById('moviesList');
-var originalMovies = moviesList.innerHTML;
+var originalMoviesList = moviesList.cloneNode(true); // Clone the original movies list
 
 var slider = document.getElementById('slider');  
 var topRatedSection = document.querySelector('.top-rated');
 var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
 
-document.getElementById('searchInput').addEventListener('input', function(event) {
+document.getElementById('searchInput').addEventListener('input', function() {
   var searchText = this.value.toLowerCase();
   var movieType = document.getElementById('movieType').value;
 
@@ -152,7 +152,7 @@ document.getElementById('searchInput').addEventListener('input', function(event)
   var currentList = moviesList;
   var querySelector = '.card-title';
 
-  var movies = currentList.querySelectorAll(querySelector);
+  var movies = originalMoviesList.querySelectorAll(querySelector); // Use the original movies list
   var filteredMovies = [];
   movies.forEach(function(movie) {
     var movieTitle = movie.textContent.toLowerCase();
@@ -173,92 +173,12 @@ document.getElementById('searchInput').addEventListener('input', function(event)
     });
   } else {
     // If search input is empty, restore original movies
-    currentList.innerHTML = originalMovies;
-  }
-
-  // Check if the event target is the cancel button, if so, prevent clearing the textbox
-  if (event.target.classList.contains('cancel-btn')) {
-    event.preventDefault();
+    currentList.innerHTML = originalMoviesList.innerHTML; // Restore original movies list HTML
   }
 });
 
-
-
-
-/**
- * menu button action drama thriller
- */
-
- document.addEventListener("DOMContentLoaded", function () {
-    const actionButton = document.getElementById("actionButton");
-    const crimeButton = document.getElementById("crimeButton");
-    const thrillerButton = document.getElementById("thrillerButton"); // Corrected ID
-    const horrorButton = document.getElementById("horrorButton");
-    const comedyButton = document.getElementById("comedyButton");
-    const romanceButton = document.getElementById("romanceButton");
-    const dramaButton = document.getElementById("dramaButton");
-    const dubbedButton = document.getElementById("dubbedButton"); 
-    const slider = document.getElementById('slider');  
-    const topRatedSection = document.querySelector('.top-rated .section-title');
-    const moviesList = document.getElementById("moviesList");
-
-    actionButton.addEventListener("click", function () {
-        filterMovies("action");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-    crimeButton.addEventListener("click", function () {
-        filterMovies("crime");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-    thrillerButton.addEventListener("click", function () {
-        filterMovies("thriller");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-    horrorButton.addEventListener("click", function () {
-        filterMovies("horror");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-    comedyButton.addEventListener("click", function () {
-        filterMovies("comedy");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-       romanceButton.addEventListener("click", function () {
-        filterMovies("romance");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });   
-
-    dramaButton.addEventListener("click", function () {
-        filterMovies("drama");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });      
-
-    dubbedButton.addEventListener("click", function () {
-        filterMovies("dubbed");
-        slider.style.display = 'none';
-        topRatedSection.style.marginTop = '100px';
-    });
-
-    function filterMovies(tag) {
-        const movieCards = moviesList.querySelectorAll(".movie-card");
-        movieCards.forEach(function (card) {
-            const tags = card.getAttribute("data-tags");
-            if (tags.includes(tag)) {
-                card.parentNode.style.display = "grid"; // Set display to grid
-            } else {
-                card.parentNode.style.display = "none";
-            }
-        });
-    }
+// Event listener for back button press
+window.addEventListener('popstate', function(event) {
+  // Re-trigger search functionality with the current search input value
+  document.getElementById('searchInput').dispatchEvent(new Event('input'));
 });
