@@ -1701,7 +1701,7 @@ color: #0DFF5D;
 
 }
 
-.container { max-width: 5280px; }
+@media only screen and { max-width: 5280px; 
 
 /* MOVIE CARD */
 
@@ -1779,7 +1779,7 @@ color: #0DFF5D;
   font-size: 30px;
   transform: rotate(-0.25turn);
 }
-
+}
 
 /* Mobile view */
   
