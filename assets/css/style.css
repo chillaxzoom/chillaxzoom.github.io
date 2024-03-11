@@ -1243,19 +1243,7 @@ color: #0DFF5D;
 
 
 
-@media only screen and (min-width: 55in) {
-.movies-list {
-  display: grid;
-  gap: 50px;
-}
 
-.movie-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;   
-}
-  }
 
 
 /**
