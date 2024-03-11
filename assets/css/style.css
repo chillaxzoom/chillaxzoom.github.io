@@ -446,14 +446,14 @@ span.disable-links {
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 20px;
+  padding-block: 10px;
   transition: var(--transition-2);
   z-index: 4;
 }
 
 .header.active {
   background: var(--eerie-black);
-  padding-block: 20px;
+  padding-block: 10px;
 }
 
 .header .container {
@@ -612,7 +612,7 @@ span.disable-links {
   background: url("../images/upcoming.png") no-repeat;
   background-size: cover;
   background-position: center;
-  padding-block: 30px;
+  padding-block: 15px;
 }
 
 .upcoming .flex-wrapper { margin-bottom: 20px; }
