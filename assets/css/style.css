@@ -765,7 +765,7 @@ color: #FF007F;}
   background-size: cover;
   background-position: center;
   padding-block: 20px;
-
+margin-top: 60px;
 }
 
 .top-rated .section-title { 
@@ -1776,7 +1776,7 @@ color: #0DFF5D;
 }
 
 .top-rated {
-  margin-top: -50px;
+  margin-top: 0px;
 }
 
 .movies-list.has-scrollbar {
