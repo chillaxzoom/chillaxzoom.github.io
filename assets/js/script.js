@@ -132,199 +132,56 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
  
 
-  // JavaScript for filtering and arranging movies
-  var moviesList = document.getElementById('moviesList');
-  var kidsMoviesList = document.getElementById('kidsMoviesList');
-  var originalMovies = moviesList.innerHTML;
-  var originalKidsMovies = kidsMoviesList.innerHTML;
 
-  var slider = document.getElementById('slider');  
-  var topRatedSection = document.querySelector('.top-rated');
-  var topRatedSection = document.querySelector('.top-rated .section-title');
+ // JavaScript for filtering and arranging movies
+var moviesList = document.getElementById('moviesList');
+var originalMovies = moviesList.innerHTML;
 
-  document.getElementById('searchInput').addEventListener('input', function() {
-    var searchText = this.value.toLowerCase();
-    var movieType = document.getElementById('movieType').value;
+var slider = document.getElementById('slider');  
+var topRatedSection = document.querySelector('.top-rated');
+var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
+
+document.getElementById('searchInput').addEventListener('input', function(event) {
+  var searchText = this.value.toLowerCase();
+  var movieType = document.getElementById('movieType').value;
 
   slider.style.display = searchText.length >= 1 ? 'none' : '';    
-         topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
+  topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
 
-    // Choose which movie list to search based on selected option
-    var currentList = movieType === 'movies' ? moviesList : kidsMoviesList;
-    var querySelector = movieType === 'movies' ? '.card-title' : '.kidscard-title';
+  // Choose which movie list to search based on selected option
+  var currentList = moviesList;
+  var querySelector = '.card-title';
 
-
-    var movies = currentList.querySelectorAll(querySelector);
-    var filteredMovies = [];
-    movies.forEach(function(movie) {
-      var movieTitle = movie.textContent.toLowerCase();
-      if (movieTitle.includes(searchText)) {
-        filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
-      }
-    });
-
-    // Clear the previous list
-    currentList.innerHTML = '';
-
-    // Append filtered movies to the list
-    if (searchText !== '') {
-      filteredMovies.forEach(function(movie) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = movie.innerHTML;
-        currentList.appendChild(listItem);
-      });
-    } else {
-      // If search input is empty, restore original movies
-      if (movieType === 'movies') {
-        currentList.innerHTML = originalMovies;
-      } else {
-        currentList.innerHTML = originalKidsMovies;
-      }
+  var movies = currentList.querySelectorAll(querySelector);
+  var filteredMovies = [];
+  movies.forEach(function(movie) {
+    var movieTitle = movie.textContent.toLowerCase();
+    if (movieTitle.includes(searchText)) {
+      filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
     }
   });
 
+  // Clear the previous list
+  currentList.innerHTML = '';
 
-// Event listener for select change
-document.getElementById('movieType').addEventListener('change', function() {
-    var tvSeriesSection = document.querySelector('.tv-series');
-    var containerDiv = document.querySelector('.container');
-    var movieType = this.value;
-    
-    if (movieType === 'movies') {
-        topRatedSection.style.display = ''; 
-        moviesList.style.display = '';
-        slider.style.display = 'none';       
-        topRatedSection.style.marginTop = '60px';
-    } else if (movieType === 'kidsmovies') {
-        slider.style.display = 'none';
-        moviesList.style.display = 'none';
-        topRatedSection.style.display = 'none';   
-        kidsMoviesList.style.display = '';
-        tvSeriesSection.style.marginTop = '20px';
-    } else {
-        // If movieType is not 'movies' or 'kidsmovies', show "Not Found" message in an alert window
-        alert('Not Found');
-    }
+  // Append filtered movies to the list
+  if (searchText !== '') {
+    filteredMovies.forEach(function(movie) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = movie.innerHTML;
+      currentList.appendChild(listItem);
+    });
+  } else {
+    // If search input is empty, restore original movies
+    currentList.innerHTML = originalMovies;
+  }
+
+  // Check if the event target is the cancel button, if so, prevent clearing the textbox
+  if (event.target.classList.contains('cancel-btn')) {
+    event.preventDefault();
+  }
 });
 
-
-
-
-
-// Event listener for button click
-document.getElementById('actionButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('crimeButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('thrillerButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('horrorButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('comedyButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('dramaButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none';   
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-// Event listener for button click
-document.getElementById('dubbedButton').addEventListener('click', function() {
-var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-   kidsMoviesList.style.display = 'none';
-tvSeriesSection.style.display = 'none'; 
-  tvSeriesSection.style.marginTop = '20px';  
- moviesList.style.display = '';
-  topRatedSection.style.display = '';
-   topratedSection.style.marginTop = '-40px';
-
-});
-
-
-
-// Event listener for button click
-document.getElementById('kidsButton').addEventListener('click', function() {
-  var topratedSection = document.querySelector('.top-rated');
-var tvSeriesSection = document.querySelector('.tv-series');
-var containerDiv = document.querySelector('.container');
-  slider.style.display = 'none';
-  moviesList.style.display = 'none';
-   topRatedSection.style.display = 'none'; 
-   topratedSection.style.marginTop = '-40px';  
-  kidsMoviesList.style.display = '';
-  tvSeriesSection.style.display = ''; 
-  tvSeriesSection.style.marginTop = '60px';
-});
 
 
 
@@ -405,41 +262,3 @@ var containerDiv = document.querySelector('.container');
         });
     }
 });
-
-
-
- // JavaScript function to show the video player and hide the movie detail section
-    function showVideoPlayer() {
-      // Hide the movie detail section
-      var content = document.getElementById("content");
-      content.style.display = "none";
-
-      // Show the video player container
-      var videoPlayerContainer = document.getElementById("videoPlayerContainer");
-      videoPlayerContainer.style.display = "block";
-      // Play the video
-      var videoPlayer = document.getElementById("videoPlayer");
-      videoPlayer.play();
-    }  
-
-
-
-    function downloadVideo() {
-        var videoUrl = document.getElementById("downloadLink").href;
-        var fileName = videoUrl.substring(videoUrl.lastIndexOf("/") + 1);
-
-        // Create a temporary anchor element to trigger download
-        var downloadLink = document.createElement("a");
-        downloadLink.href = videoUrl;
-        downloadLink.download = fileName;
-
-        // Append the anchor element to the body
-        document.body.appendChild(downloadLink);
-
-        // Trigger the click event on the anchor element
-        downloadLink.click();
-
-        // Clean up
-        document.body.removeChild(downloadLink);
-    }
-
