@@ -453,7 +453,7 @@ span.disable-links {
 
 .header.active {
   background: var(--eerie-black);
-  padding-block: 10px;
+  padding-block: 20px;
 }
 
 .header .container {
@@ -1443,7 +1443,7 @@ color: #0DFF5D;
    * HEADER
    */
 
-  .header.active { padding-block: 10px; }
+  .header.active { padding-block: 20px; }
 
   .menu-open-btn,
   .navbar-top,
