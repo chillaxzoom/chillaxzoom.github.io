@@ -130,54 +130,67 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
  * search the card title
  */
 
- // JavaScript for filtering and arranging movies
-var moviesList = document.getElementById('moviesList');
-var originalMovies = moviesList.innerHTML;
+ 
 
-var slider = document.getElementById('slider');  
-var topRatedSection = document.querySelector('.top-rated');
-var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
+// Ensure DOM content is loaded before executing JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+    var moviesList = document.getElementById('moviesList');
+    var originalMovies = moviesList.innerHTML;
 
-document.getElementById('searchInput').addEventListener('input', function() {
-  var searchText = this.value.toLowerCase();
-  var movieType = document.getElementById('movieType').value;
+    // Check if necessary elements exist
+    var slider = document.getElementById('slider');
+    var searchInput = document.getElementById('searchInput');
+    var topRatedSection = document.querySelector('.top-rated');
 
-  slider.style.display = searchText.length >= 1 ? 'none' : '';    
-  topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
-
-  // Choose which movie list to search based on selected option
-  var currentList = moviesList;
-  var querySelector = '.card-title';
-
-  var movies = currentList.querySelectorAll(querySelector);
-  var filteredMovies = [];
-  movies.forEach(function(movie) {
-    var movieTitle = movie.textContent.toLowerCase();
-    if (movieTitle.includes(searchText)) {
-      filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
+    if (!slider || !searchInput || !topRatedSection) {
+        console.error("Required elements not found.");
+        return;
     }
-  });
 
-  // Clear the previous list
-  currentList.innerHTML = '';
+    var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
 
-  // Append filtered movies to the list
-  if (searchText !== '') {
-    filteredMovies.forEach(function(movie) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = movie.innerHTML;
-      currentList.appendChild(listItem);
+    searchInput.addEventListener('input', function () {
+        var searchText = this.value.toLowerCase();
+        var movieType = document.getElementById('movieType').value;
+
+        slider.style.display = searchText.length >= 1 ? 'none' : '';
+        topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
+
+        // Choose which movie list to search based on selected option
+        var currentList = moviesList;
+        var querySelector = '.card-title';
+
+        var movies = currentList.querySelectorAll(querySelector);
+        var filteredMovies = [];
+        movies.forEach(function (movie) {
+            var movieTitle = movie.textContent.toLowerCase();
+            if (movieTitle.includes(searchText)) {
+                filteredMovies.push(movie.closest('.movie-item'));
+            }
+        });
+
+        // Clear the previous list
+        currentList.innerHTML = '';
+
+        // Append filtered movies to the list
+        if (searchText !== '') {
+            filteredMovies.forEach(function (movie) {
+                currentList.appendChild(movie);
+            });
+        } else {
+            // If search input is empty, restore original movies
+            currentList.innerHTML = originalMovies;
+        }
     });
-  } else {
-    // If search input is empty, restore original movies
-    currentList.innerHTML = originalMovies;
-  }
-});
 
-// Event listener for back button press
-window.addEventListener('popstate', function(event) {
-  // Re-trigger search functionality with the current search input value
-  document.getElementById('searchInput').dispatchEvent(new Event('input'));
+    // Backup original HTML for restoration
+    var originalMovies = moviesList.innerHTML;
+
+    // Event listener for back button press
+    window.addEventListener('popstate', function (event) {
+        // Re-trigger search functionality with the current search input value
+        searchInput.dispatchEvent(new Event('input'));
+    });
 });
 
 
