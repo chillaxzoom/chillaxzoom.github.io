@@ -132,67 +132,44 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
  
 
-// Ensure DOM content is loaded before executing JavaScript
-document.addEventListener('DOMContentLoaded', function () {
-    var moviesList = document.getElementById('moviesList');
-    var originalMovies = moviesList.innerHTML;
+ // JavaScript for filtering and arranging movies
+var moviesList = document.getElementById('moviesList');
+var originalMovies = moviesList.innerHTML;
 
-    // Check if necessary elements exist
-    var slider = document.getElementById('slider');
-    var searchInput = document.getElementById('searchInput');
-    var topRatedSection = document.querySelector('.top-rated');
+var slider = document.getElementById('slider');  
+var topRatedSection = document.querySelector('.top-rated .section-title');
 
-    if (!slider || !searchInput || !topRatedSection) {
-        console.error("Required elements not found.");
-        return;
-    }
+document.getElementById('searchInput').addEventListener('input', function() {
+    var searchText = this.value.toLowerCase();
+    var movieType = 'movies'; // Hardcoded since 'kidsmovies' option is removed
 
-    var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
+    slider.style.display = searchText.length >= 1 ? 'none' : '';    
+    topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
 
-    searchInput.addEventListener('input', function () {
-        var searchText = this.value.toLowerCase();
-        var movieType = document.getElementById('movieType').value;
-
-        slider.style.display = searchText.length >= 1 ? 'none' : '';
-        topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
-
-        // Choose which movie list to search based on selected option
-        var currentList = moviesList;
-        var querySelector = '.card-title';
-
-        var movies = currentList.querySelectorAll(querySelector);
-        var filteredMovies = [];
-        movies.forEach(function (movie) {
-            var movieTitle = movie.textContent.toLowerCase();
-            if (movieTitle.includes(searchText)) {
-                filteredMovies.push(movie.closest('.movie-item'));
-            }
-        });
-
-        // Clear the previous list
-        currentList.innerHTML = '';
-
-        // Append filtered movies to the list
-        if (searchText !== '') {
-            filteredMovies.forEach(function (movie) {
-                currentList.appendChild(movie);
-            });
-        } else {
-            // If search input is empty, restore original movies
-            currentList.innerHTML = originalMovies;
+    var currentList = moviesList;
+    var movies = currentList.querySelectorAll('.card-title');
+    var filteredMovies = [];
+    movies.forEach(function(movie) {
+        var movieTitle = movie.textContent.toLowerCase();
+        if (movieTitle.includes(searchText)) {
+            filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
         }
     });
 
-    // Backup original HTML for restoration
-    var originalMovies = moviesList.innerHTML;
+    currentList.innerHTML = '';
 
-    // Event listener for back button press
-    window.addEventListener('popstate', function (event) {
-        // Re-trigger search functionality with the current search input value
-        searchInput.dispatchEvent(new Event('input'));
-    });
+    if (searchText !== '') {
+        filteredMovies.forEach(function(movie) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = movie.innerHTML;
+            currentList.appendChild(listItem);
+        });
+    } else {
+        currentList.innerHTML = originalMovies;
+    }
 });
 
+// Since 'kidsmovies' option is removed, no need for a change event listener
 
 
 
