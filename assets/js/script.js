@@ -184,6 +184,183 @@ window.addEventListener('popstate', function(event) {
 });
 
 
+
+/**
+ * menu button action drama thriller
+ */
+
+
+// Event listener for button click
+document.getElementById('actionButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('crimeButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('thrillerButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('horrorButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('comedyButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('dramaButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+// Event listener for button click
+document.getElementById('dubbedButton').addEventListener('click', function() {
+var topratedSection = document.querySelector('.top-rated');
+
+var containerDiv = document.querySelector('.container');
+  slider.style.display = 'none';
+
+  tvSeriesSection.style.marginTop = '20px';  
+ moviesList.style.display = '';
+  topRatedSection.style.display = '';
+   topratedSection.style.marginTop = '-40px';
+
+});
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const actionButton = document.getElementById("actionButton");
+    const crimeButton = document.getElementById("crimeButton");
+    const thrillerButton = document.getElementById("thrillerButton"); // Corrected ID
+    const horrorButton = document.getElementById("horrorButton");
+    const comedyButton = document.getElementById("comedyButton");
+    const romanceButton = document.getElementById("romanceButton");
+    const dramaButton = document.getElementById("dramaButton");
+    const dubbedButton = document.getElementById("dubbedButton"); 
+    const slider = document.getElementById('slider');  
+    const topRatedSection = document.querySelector('.top-rated .section-title');
+    const moviesList = document.getElementById("moviesList");
+
+    actionButton.addEventListener("click", function () {
+        filterMovies("action");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+    crimeButton.addEventListener("click", function () {
+        filterMovies("crime");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+    thrillerButton.addEventListener("click", function () {
+        filterMovies("thriller");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+    horrorButton.addEventListener("click", function () {
+        filterMovies("horror");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+    comedyButton.addEventListener("click", function () {
+        filterMovies("comedy");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+       romanceButton.addEventListener("click", function () {
+        filterMovies("romance");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });   
+
+    dramaButton.addEventListener("click", function () {
+        filterMovies("drama");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });      
+
+    dubbedButton.addEventListener("click", function () {
+        filterMovies("dubbed");
+        slider.style.display = 'none';
+        topRatedSection.style.marginTop = '100px';
+    });
+
+    function filterMovies(tag) {
+        const movieCards = moviesList.querySelectorAll(".movie-card");
+        movieCards.forEach(function (card) {
+            const tags = card.getAttribute("data-tags");
+            if (tags.includes(tag)) {
+                card.parentNode.style.display = "grid"; // Set display to grid
+            } else {
+                card.parentNode.style.display = "none";
+            }
+        });
+    }
+});
+
+
+
+
+
 // JavaScript function to show the video player and hide the movie detail section
     function showVideoPlayer() {
       // Hide the movie detail section
