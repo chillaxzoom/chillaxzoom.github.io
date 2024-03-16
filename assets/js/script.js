@@ -132,8 +132,6 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
 
  
 
-
-
   // JavaScript for filtering and arranging movies
   var moviesList = document.getElementById('moviesList');
   var kidsMoviesList = document.getElementById('kidsMoviesList');
@@ -185,17 +183,10 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
     }
   });
 
-// Event listener for back button press
-window.addEventListener('popstate', function(event) {
-  // Re-trigger search functionality with the current search input value
-  document.getElementById('searchInput').dispatchEvent(new Event('input'));
-});
 
 
 
-/**
- * menu button action drama thriller
- */
+////
 
 
 // Event listener for button click
@@ -291,6 +282,13 @@ var containerDiv = document.querySelector('.container');
 });
 
 
+
+
+
+/**
+ * menu button action drama thriller
+ */
+
  document.addEventListener("DOMContentLoaded", function () {
     const actionButton = document.getElementById("actionButton");
     const crimeButton = document.getElementById("crimeButton");
@@ -366,4 +364,39 @@ var containerDiv = document.querySelector('.container');
 });
 
 
+
+ // JavaScript function to show the video player and hide the movie detail section
+    function showVideoPlayer() {
+      // Hide the movie detail section
+      var content = document.getElementById("content");
+      content.style.display = "none";
+
+      // Show the video player container
+      var videoPlayerContainer = document.getElementById("videoPlayerContainer");
+      videoPlayerContainer.style.display = "block";
+      // Play the video
+      var videoPlayer = document.getElementById("videoPlayer");
+      videoPlayer.play();
+    }  
+
+
+
+    function downloadVideo() {
+        var videoUrl = document.getElementById("downloadLink").href;
+        var fileName = videoUrl.substring(videoUrl.lastIndexOf("/") + 1);
+
+        // Create a temporary anchor element to trigger download
+        var downloadLink = document.createElement("a");
+        downloadLink.href = videoUrl;
+        downloadLink.download = fileName;
+
+        // Append the anchor element to the body
+        document.body.appendChild(downloadLink);
+
+        // Trigger the click event on the anchor element
+        downloadLink.click();
+
+        // Clean up
+        document.body.removeChild(downloadLink);
+    }
 
