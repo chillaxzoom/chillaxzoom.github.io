@@ -130,58 +130,57 @@ document.querySelectorAll('.zoom-container').forEach((container) => {
  * search the card title
  */
 
- 
+ // JavaScript for filtering and arranging movies
+var moviesList = document.getElementById('moviesList');
+var originalMovies = moviesList.innerHTML;
 
-  // JavaScript for filtering and arranging movies
-  var moviesList = document.getElementById('moviesList');
-  var kidsMoviesList = document.getElementById('kidsMoviesList');
-  var originalMovies = moviesList.innerHTML;
-  var originalKidsMovies = kidsMoviesList.innerHTML;
+var slider = document.getElementById('slider');  
+var topRatedSection = document.querySelector('.top-rated');
+var topRatedSectionTitle = document.querySelector('.top-rated .section-title');
 
-  var slider = document.getElementById('slider');  
-  var topRatedSection = document.querySelector('.top-rated');
-  var topRatedSection = document.querySelector('.top-rated .section-title');
-
-  document.getElementById('searchInput').addEventListener('input', function() {
-    var searchText = this.value.toLowerCase();
-    var movieType = document.getElementById('movieType').value;
+document.getElementById('searchInput').addEventListener('input', function() {
+  var searchText = this.value.toLowerCase();
+  var movieType = document.getElementById('movieType').value;
 
   slider.style.display = searchText.length >= 1 ? 'none' : '';    
-         topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
+  topRatedSection.style.marginTop = searchText.length >= 1 ? '100px' : '';
 
-    // Choose which movie list to search based on selected option
-    var currentList = movieType === 'movies' ? moviesList : kidsMoviesList;
-    var querySelector = movieType === 'movies' ? '.card-title' : '.kidscard-title';
+  // Choose which movie list to search based on selected option
+  var currentList = moviesList;
+  var querySelector = '.card-title';
 
-
-    var movies = currentList.querySelectorAll(querySelector);
-    var filteredMovies = [];
-    movies.forEach(function(movie) {
-      var movieTitle = movie.textContent.toLowerCase();
-      if (movieTitle.includes(searchText)) {
-        filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
-      }
-    });
-
-    // Clear the previous list
-    currentList.innerHTML = '';
-
-    // Append filtered movies to the list
-    if (searchText !== '') {
-      filteredMovies.forEach(function(movie) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = movie.innerHTML;
-        currentList.appendChild(listItem);
-      });
-    } else {
-      // If search input is empty, restore original movies
-      if (movieType === 'movies') {
-        currentList.innerHTML = originalMovies;
-      } else {
-        currentList.innerHTML = originalKidsMovies;
-      }
+  var movies = currentList.querySelectorAll(querySelector);
+  var filteredMovies = [];
+  movies.forEach(function(movie) {
+    var movieTitle = movie.textContent.toLowerCase();
+    if (movieTitle.includes(searchText)) {
+      filteredMovies.push(movie.parentNode.parentNode.parentNode.parentNode);
     }
   });
+
+  // Clear the previous list
+  currentList.innerHTML = '';
+
+  // Append filtered movies to the list
+  if (searchText !== '') {
+    filteredMovies.forEach(function(movie) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = movie.innerHTML;
+      currentList.appendChild(listItem);
+    });
+  } else {
+    // If search input is empty, restore original movies
+    currentList.innerHTML = originalMovies;
+  }
+});
+
+// Event listener for back button press
+window.addEventListener('popstate', function(event) {
+  // Re-trigger search functionality with the current search input value
+  document.getElementById('searchInput').dispatchEvent(new Event('input'));
+});
+
+
 
 
 
