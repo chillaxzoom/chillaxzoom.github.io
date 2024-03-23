@@ -125,12 +125,6 @@ span.disable-links {
     pointer-events: none;
 }
 
-.centered {
-    text-align: center;
-}
-
-
-
 /*-----------------------------------*\
  * #REUSED STYLE
 \*-----------------------------------*/
@@ -1728,10 +1722,6 @@ color: #0DFF5D;
     transform-style: preserve-3d;
     border-radius: 15px;
 }
-
-  .centered {
-    text-align: center;
-    }
     
  .movies-list { 
     display: grid;
