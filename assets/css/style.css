@@ -2173,3 +2173,45 @@ input[type=radio]:checked {
   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
   transform: translate3d(-20%, 0, -100px);
 }
+
+
+/* badge button */
+.button-22 {
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 12px;
+     font-family: "Source Sans Pro", "Arial", sans-serif;
+    width: 100px;
+    
+    position: relative;
+    overflow: hidden;
+    background-color: #00C0A3;
+    border-radius: 3px;
+    color: white;
+  margin-top: -4px;
+  }
+  
+  .button-22::before {
+    content: 'Views';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: #D62598;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .button-22 span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-right: -50px;
+  
+  }
