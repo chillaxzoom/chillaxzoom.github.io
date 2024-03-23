@@ -59,6 +59,24 @@ window.addEventListener("scroll", function () {
 });
 
 
+/**
+ * today and total visit count
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+  let today = new Date().toLocaleDateString();
+  let totalVisits = localStorage.getItem('totalVisits') || 2895;
+  let todaysVisits = localStorage.getItem(today) || 0;
+
+  todaysVisits++;
+  totalVisits++;
+
+  localStorage.setItem(today, todaysVisits);
+  localStorage.setItem('totalVisits', totalVisits);
+
+  document.getElementById('visits').innerText = todaysVisits + ' / ' + totalVisits;
+});
+
 
 
 /**
