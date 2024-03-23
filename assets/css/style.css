@@ -1728,6 +1728,11 @@ color: #0DFF5D;
     transform-style: preserve-3d;
     border-radius: 15px;
 }
+
+    .centered {
+    text-align: center;
+    }
+    
  .movies-list { 
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Display two items per row */
