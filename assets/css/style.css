@@ -125,7 +125,9 @@ span.disable-links {
     pointer-events: none;
 }
 
-
+.centered {
+    text-align: center;
+}
 
 
 
