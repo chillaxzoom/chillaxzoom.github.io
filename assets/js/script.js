@@ -348,7 +348,15 @@ var containerDiv = document.querySelector('.container');
     }
 });
 
+// Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Count the occurrences of h3 tags with class "card-title"
+        var count = document.querySelectorAll('h3.card-title').length;
 
+        // Update the span element with the count
+        var spanElement = document.getElementById('countSpan');
+        spanElement.innerText = count;
+    });
 
  // JavaScript function to show the video player and hide the movie detail section
     function showVideoPlayer() {
