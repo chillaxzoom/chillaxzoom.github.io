@@ -1640,7 +1640,7 @@ color: #0DFF5D;
   .header-actions .btn-primary {
     display: block;
     --fs-11: 14px;
-    padding: 10px 25px;
+    padding: 2px 25px;
     letter-spacing: 1px;
   }
 
