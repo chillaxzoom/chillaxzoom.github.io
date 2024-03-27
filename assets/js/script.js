@@ -403,23 +403,34 @@ function downloadVideo(url, filename) {
 
 // search count and total count
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to update the count
-    function updateCount() {
+    // Function to update total count
+    function updateTotalCount() {
         var count = document.querySelectorAll('h3.card-title').length;
         var spanElement = document.getElementById('countSpan');
         spanElement.innerText = count;
     }
 
-    // Call the updateCount function initially to set the count
-    updateCount();
+    // Function to update count when searching
+    function updateSearchCount() {
+        var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        var count = 0;
+        var cardTitles = document.querySelectorAll('h3.card-title');
+        cardTitles.forEach(function(title) {
+            if (title.textContent.toLowerCase().includes(searchQuery)) {
+                count++;
+            }
+        });
+        var spanElement = document.getElementById('countSpan');
+        spanElement.innerText = count;
+    }
 
-    // Update the count whenever the input field changes
+    // Call the updateTotalCount function initially to set the total count
+    updateTotalCount();
+
+    // Update the total count whenever the input field changes
+    var searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', function() {
-        updateCount();
+        updateTotalCount();
+        updateSearchCount();
     });
-});
-
-// Update the count whenever the input field changes
-searchInput.addEventListener('input', function() {
-    updateCount();
 });
