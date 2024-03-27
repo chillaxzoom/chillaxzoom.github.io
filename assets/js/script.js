@@ -401,25 +401,23 @@ function downloadVideo(url, filename) {
             .catch(error => console.error('Download failed:', error));
     }
 
-// Wait for the DOM content to be fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        // Count the occurrences of h3 tags with class "card-title"
+// search count and total count
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to update the count
+    function updateCount() {
         var count = document.querySelectorAll('h3.card-title').length;
-
-        // Update the span element with the count
         var spanElement = document.getElementById('countSpan');
         spanElement.innerText = count;
+    }
+
+    // Call the updateCount function initially to set the count
+    updateCount();
+
+    // Update the count whenever the input field changes
+    searchInput.addEventListener('input', function() {
+        updateCount();
     });
-
-var countSpan = document.getElementById('countSpan');
-
-function updateCount() {
-    var cardTitles = document.querySelectorAll('.card-title');
-    countSpan.textContent = cardTitles.length;
-}
-
-// Call the updateCount function initially to set the count
-updateCount();
+});
 
 // Update the count whenever the input field changes
 searchInput.addEventListener('input', function() {
