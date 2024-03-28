@@ -90,7 +90,7 @@ const changeSlide = () => {
 
     // Move to the next slide
     currentSlide++;
-    if (currentSlide > 12) {
+    if (currentSlide > 6) {
       currentSlide = 1;
     }
   }
