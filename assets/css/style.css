@@ -123,6 +123,7 @@ body.active { overflow: hidden; }
 
 span.disable-links {
     pointer-events: none;
+  cursor: default;
 }
 
 /*-----------------------------------*\
