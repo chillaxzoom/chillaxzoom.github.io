@@ -407,7 +407,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateTotalCount() {
         var count = document.querySelectorAll('h3.card-title').length;
         var spanElement = document.getElementById('countSpan');
+       var spanElements = document.getElementById('countSpans');
         spanElement.innerText = count;
+      spanElements.innerText = count;
     }
 
     // Function to update count when searching
@@ -421,7 +423,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         var spanElement = document.getElementById('countSpan');
+        var spanElements = document.getElementById('countSpans');
         spanElement.innerText = count;
+       spanElements.innerText = count;
     }
 
     // Call the updateTotalCount function initially to set the total count
