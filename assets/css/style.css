@@ -1756,6 +1756,12 @@ color: #0DFF5D;
         width: 120px;
     }
 
+    .footer-bottom-img {
+  max-width: max-content;
+  width: 100%;
+  margin-inline: auto;
+      margin-top: 15px;
+}
 
  .lang-wrapper {
   display: none;
