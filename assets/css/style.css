@@ -902,7 +902,7 @@ color: #0DFF5D;
   background: url("../images/footer.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  padding-block: 30px;
+  padding-block: 10px;
 }
 
 .footer-brand-wrapper .logo {
