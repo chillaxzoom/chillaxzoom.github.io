@@ -348,25 +348,22 @@ var containerDiv = document.querySelector('.container');
     }
 });
 
-function showVideoPlayer() {
-        console.log("showVideoPlayer function called");
+ function showVideoPlayer() {
+    console.log("showVideoPlayer function called");
 
-        // Hide the movie detail section
-        var content = document.getElementById("content");
-        console.log("Content element:", content);
-        content.style.display = "none";
+    // Hide the movie detail section
+    var content = document.getElementById("content");
+    console.log("Content element:", content);
+    content.style.display = "none";
 
-        // Show the video player container
-        var videoPlayerContainer = document.getElementById("videoPlayerContainer");
-        videoPlayerContainer.style.display = "block";
+    // Show the video player container
+    var videoPlayerContainer = document.getElementById("videoPlayerContainer");
+    videoPlayerContainer.style.display = "block";
 
-        // Play the video when it's ready
-        var videoPlayer = document.getElementById("videoPlayer");
-        videoPlayer.addEventListener('canplay', function() {
-            videoPlayer.play();
-        });
-    }
-
+    // Play the video
+    var videoPlayer = document.getElementById("videoPlayer");
+    videoPlayer.play();
+}  
 
 
     function downloadVideo() {
