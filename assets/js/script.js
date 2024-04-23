@@ -350,24 +350,6 @@ var containerDiv = document.querySelector('.container');
 
 
 
- // JavaScript function to show the video player and hide the movie detail section
-   function showVideoPlayer() {
-    console.log("showVideoPlayer function called");
-
-    // Hide the movie detail section
-    var content = document.getElementById("content");
-    console.log("Content element:", content);
-    content.style.display = "none";
-
-    // Show the video player container
-    var videoPlayerContainer = document.getElementById("videoPlayerContainer");
-    videoPlayerContainer.style.display = "block";
-
-    // Play the video
-    var videoPlayer = document.getElementById("videoPlayer");
-    videoPlayer.play();
-}  
-
 
 
     function downloadVideo() {
